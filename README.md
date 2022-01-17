@@ -1,2 +1,3 @@
 # material-table
  
+yarn install
