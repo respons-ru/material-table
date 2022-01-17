@@ -1,0 +1,41 @@
+@import './assets/css/fonts/_fonts.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #EEE;
+}
+
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.MuiToolbar-gutters {
+    display: none !important;
+}
+
+.container {
+    width: 596px;
+    margin: 50px auto 50px auto;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        width: 300px;
+    }
+}

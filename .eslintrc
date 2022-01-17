@@ -1,0 +1,19 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "rules": {
+        "no-unused-vars": "off",
+        "no-sequences": "off",
+        "no-console": "off",
+        "react/prop-types": "off",
+        "react/forbid-prop-types": 0
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint"
+}
