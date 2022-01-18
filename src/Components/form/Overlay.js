@@ -7,11 +7,11 @@ export default function Overlay({formData, saveHandler}) {
     const [form, setForm] = useState(formData)
 
     function onSave() {
-        if (!Object.values(formData).every(item => typeof item === 'string' ? item.length : true)) return
-        saveHandler()
+        if (!Object.values(form).every(item => typeof item === 'string' ? item.length : true)) return
+        saveHandler(form)
     }
 
-    function changeValueHandler() {
+    function changeValueHandler(event) {
         const fd = JSON.parse(JSON.stringify(form))
         fd[event.target.name] = event.target.value
         setForm(fd)

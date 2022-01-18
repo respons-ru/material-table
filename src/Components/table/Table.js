@@ -60,6 +60,7 @@ export default function Table({tableData, copyTable, removeTable, tableKey, edit
                         backgroundColor: "white",
                         color: "#FF00dd"
                     },
+                    draggable: false,
                     filtering: false,
                     sorting: false,
                     showTitle: false,

@@ -89,9 +89,10 @@ export default function App() {
         setFormData(fd)
     }
 
-    function saveHandler() {
-        const {name, surname, age, city, meta} = formData
+    function saveHandler(form = null) {
+        const {name, surname, age, city, meta} = form || formData
         const newTable = JSON.parse(JSON.stringify(tables))
+
         if (!formData.isEdit) {
             newTable[0].tableData.push({
                 name,
@@ -100,7 +101,6 @@ export default function App() {
                 city
             })
             newTable[0].tableKey = Date.now()
-            setTable(newTable)
         } else {
             const tableIndex = tables.findIndex(table => table.tableKey === meta.tableIndex)
             newTable[tableIndex].tableData[meta.rowIndex] = {
@@ -110,16 +110,16 @@ export default function App() {
                 city
             }
             newTable[tableIndex].tableKey = Date.now()
-            setTable(newTable)
-            setFormData({
-                name: '',
-                surname: '',
-                age: '',
-                city: '',
-                isEdit: false,
-                meta: {}
-            })
         }
+        setTable(newTable)
+        setFormData({
+            name: '',
+            surname: '',
+            age: '',
+            city: '',
+            isEdit: false,
+            meta: {}
+        })
     }
 
     return (
